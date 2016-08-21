@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         tapCount = tapCount + 1
         
-        print("tapCount: ")
+        print(tapCount)
         
     }
     
