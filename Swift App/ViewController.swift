@@ -12,17 +12,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
+    @IBOutlet weak var textOne: UITextField!
+    
+    @IBOutlet weak var textTwo: UITextField!
+    
     var tapCount = 0
     
     @IBAction func buttonTapped(sender: AnyObject) {
         
-        theLabel.text = "You've changed the text of the button!"
-        print("PUSH ME! button pressed")
+        print(textOne)
+        print(textOne.text!)
+        print(textTwo.text!)
         
-        tapCount = tapCount + 1
-        
-        print(tapCount)
-        
+        theLabel.text = "Answer is... \(Double(textOne.text!)! + Double(textTwo.text!)!))"
     }
     
     override func viewDidLoad() {

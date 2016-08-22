@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -30,21 +31,70 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6m-zD-Ynm"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OvK-2r-gSj">
+                                <rect key="frame" x="20" y="224" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="4L1-xh-TrD"/>
+                                    <constraint firstAttribute="width" secondItem="OvK-2r-gSj" secondAttribute="height" multiplier="56:3" id="CM7-IH-Zxj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4L1-xh-TrD"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6px-RS-uJv">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6px-RS-uJv" secondAttribute="height" multiplier="56:3" id="2h1-F4-1Ta"/>
+                                    <constraint firstAttribute="width" constant="560" id="4vM-bB-QdO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="560" id="bsb-K0-Fwf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4vM-bB-QdO"/>
+                                        <exclude reference="bsb-K0-Fwf"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6px-RS-uJv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9BQ-KX-w2J"/>
+                            <constraint firstItem="OvK-2r-gSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hwc-jk-rlV"/>
+                            <constraint firstItem="OvK-2r-gSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JOQ-Gn-0do"/>
                             <constraint firstItem="2Vh-c4-Rf7" firstAttribute="top" secondItem="1ad-bL-rh1" secondAttribute="bottom" constant="60" id="OdF-dq-7h6"/>
+                            <constraint firstItem="OvK-2r-gSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OtB-ci-bkk"/>
                             <constraint firstItem="1ad-bL-rh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XbB-gL-BDz"/>
+                            <constraint firstItem="OvK-2r-gSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dRK-zr-su3"/>
                             <constraint firstItem="2Vh-c4-Rf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oIz-dZ-QFb"/>
+                            <constraint firstItem="OvK-2r-gSj" firstAttribute="top" secondItem="2Vh-c4-Rf7" secondAttribute="bottom" constant="25" id="qb3-yI-mQX"/>
                             <constraint firstItem="1ad-bL-rh1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="rKK-pN-cwg"/>
+                            <constraint firstItem="6px-RS-uJv" firstAttribute="top" secondItem="OvK-2r-gSj" secondAttribute="bottom" constant="31" id="tIb-6t-GZ6"/>
+                            <constraint firstItem="OvK-2r-gSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvv-9a-54N"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JOQ-Gn-0do"/>
+                                <exclude reference="OtB-ci-bkk"/>
+                                <exclude reference="dRK-zr-su3"/>
+                                <exclude reference="vvv-9a-54N"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="textOne" destination="OvK-2r-gSj" id="kGU-pn-zqX"/>
+                        <outlet property="textTwo" destination="6px-RS-uJv" id="IJV-LS-dth"/>
                         <outlet property="theLabel" destination="1ad-bL-rh1" id="yRg-Ru-I0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="585" y="418"/>
         </scene>
     </scenes>
 </document>
